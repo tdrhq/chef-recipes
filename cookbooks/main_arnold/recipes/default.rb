@@ -36,7 +36,7 @@ include_recipe "nginx::source"
 
 user "deploy" do
  home "/home/deploy"
- shell "bash"
+ shell "/bin/bash"
 end
 
 directory "/home/deploy" do
