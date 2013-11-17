@@ -18,6 +18,7 @@ package 'git-core'
 package 'emacs'
 package 'imagemagick'
 package 'libmysqlclient-dev'
+gem_package 'bundler'
 
 ruby_build_ruby "2.0.0-p247" do
   prefix_path "/usr/local/ruby/ruby-2.0.0-p247"
@@ -35,6 +36,7 @@ include_recipe "nginx::source"
 
 user "deploy" do
  home "/home/deploy"
+ shell "bash"
 end
 
 directory "/home/deploy" do
