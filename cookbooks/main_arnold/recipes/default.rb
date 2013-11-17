@@ -52,7 +52,7 @@ ssh_keys = [
 directory "/home/deploy/.ssh" do
   owner "deploy"
   group "deploy"
-  mode 0600
+  mode 0700
   action :create
 end
 
