@@ -9,6 +9,10 @@
 
 
 include_recipe "ruby_build"
+include_recipe "nginx"
+
+
+node.set["nginx"]["init_style"]["init"] = "runit"
 
 package 'git-core'
 package 'emacs'
@@ -21,5 +25,15 @@ ruby_build_ruby "2.0.0-p247" do
   })
 
   action      :install
+end
+
+
+include_recipe "nginx::source"
+
+
+# create a deploy user
+
+user "deploy" do
+
 end
 
