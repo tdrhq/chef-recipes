@@ -10,6 +10,10 @@
 
 include_recipe "ruby_build"
 
+package 'git-core'
+package 'emacs'
+package 'imagemagick'
+package 'libmysqlclient-dev'
 
 ruby_build_ruby "2.0.0-p247" do
   prefix_path "/usr/local/ruby/ruby-2.0.0-p247"
@@ -18,3 +22,4 @@ ruby_build_ruby "2.0.0-p247" do
 
   action      :install
 end
+
