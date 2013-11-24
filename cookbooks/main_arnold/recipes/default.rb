@@ -10,6 +10,7 @@
 
 include_recipe "ruby_build"
 include_recipe "nginx"
+include_recipe "rvm::default"
 
 
 node.set["nginx"]["init_style"]["init"] = "runit"
